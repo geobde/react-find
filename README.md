@@ -12,11 +12,11 @@ import React { useState } from 'react'
 import Search from 'react-find'
 
  let initialData = [
-  '135 Madison Avenue',
-  '302 5th Avenue',
-  '135 Madison Avenue',
-  '49 West 45th Street',
-  '350 Park Avenue '
+  'Upper Manhattan',
+  'Marble Hill',
+  'Inwood',
+  'Washington Heights',
+  'Central Harlem'
   ];
 
 const App = () => {
