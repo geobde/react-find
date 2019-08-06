@@ -8,22 +8,34 @@ npm i react-find --save
 ### Usage
 
 ```
-import React from 'react'
+import React { useState } from 'react'
 import Search from 'react-find'
 
+ let initialData = [
+  '135 Madison Avenue',
+  '302 5th Avenue',
+  '135 Madison Avenue',
+  '49 West 45th Street',
+  '350 Park Avenue '
+  ];
+
 const App = () => {
-  data = [
-    '135 Madison Avenue',
-    '302 5th Avenue',
-    '135 Madison Avenue',
-    '49 West 45th Street',
-    '350 Park Avenue '
-  ]
+  const [data, setData] = useState(initialData);
+
+  const handleSearch = e => {
+    const query = e.target.value.toLowerCase();
+
+    axios.get(`${API}/data?name=${query}`).then(response => {
+      if (response.status === 200) {
+        setData(response.data.content);
+      }
+    })
+  };
     return (
       <Search
-        placeholder="Find your next place"
+        placeholder="Find your next place..."
         data={data}
-        onChange={onChange}
+        onChange={handleSearch}
       />
     )
 }
