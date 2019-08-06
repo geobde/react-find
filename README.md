@@ -10,6 +10,23 @@ npm i react-find --save
 ```
 import React from 'react'
 import Search from 'react-find'
+
+const App = () => {
+  data = [
+    '135 Madison Avenue',
+    '302 5th Avenue',
+    '135 Madison Avenue',
+    '49 West 45th Street',
+    '350 Park Avenue '
+  ]
+    return (
+      <Search
+        placeholder="Find your next place"
+        data={data}
+        onChange={onChange}
+      />
+    )
+}
 ```
 
 ## Props
