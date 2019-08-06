@@ -10,6 +10,7 @@ npm i react-find --save
 ```
 import React, { Component } from 'react'
 import Search from 'react-find'
+```
 
 ## Props
 
