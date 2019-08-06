@@ -3,7 +3,7 @@
   "license": "MIT",
   "author": "George Bardi",
   "description": "React Find",
-  "version": "0.1.1",
+  "version": "1.0.3",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "files": [
@@ -17,6 +17,9 @@
     "build": "rimraf dist && NODE_ENV=production babel src/lib --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,__snapshots__"
   },
   "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
     "babel-cli": "^6.26.0",
     "babel-preset-react-app": "^9.0.0",
     "react": "^16.8.6",
@@ -43,5 +46,10 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/geobde/react-find.git"
-  }
+  },
+  "keywords": [
+    "react",
+    "search",
+    "find"
+  ]
 }

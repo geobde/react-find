@@ -29,7 +29,7 @@ Input.propTypes = {
 
 Input.defaultProps = {
     type: 'text',
-    placeholder: 'Search your next house',
+    placeholder: 'City, Zip, Neighborhood, Address or MLS#',
 };
 
 export default Input;

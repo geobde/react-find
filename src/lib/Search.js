@@ -6,34 +6,37 @@ import "./Search.css";
 
 const Search = (props) => {
  const { type, placeholder, onChange, onClick, data } = props;
- const wrapperRef = useRef(null);
- const [isCollapsed, setCollapse] = useState(true);
+ const container = useRef(null);
+ const [isOpen, setOpen] = useState(true);
 
 
  useEffect(() => {
-    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("mousedown", controlMouse);
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("mousedown", controlMouse);
     };
   });
 
-  const handleClickOutside = event => {
-    if (wrapperRef && !wrapperRef.current.contains(event.target)) {
-      setCollapse(true);
+  const controlMouse = event => {
+    if (container && !container.current.contains(event.target)) {
+      setOpen(true);
     }
   };
 
   const onFocus = () => {
-     setCollapse(false);
+     setOpen(false);
   };
 
   return (
    <Fragment>
-     <Wrapper isCollapsed={isCollapsed} wrapperRef={wrapperRef}>
+     <div className="Search">
+     <Wrapper isOpen={isOpen} container={container}>
        <Input type={type} placeholder={placeholder} onChange={onChange} onFocus={onFocus} className="Search"/>
        <DropDown data={data} onClick={onClick} />
      </Wrapper>
+     </div>
    </Fragment>
+     
   )
 };
 

@@ -10,7 +10,7 @@ const DropDown = (props) => {
       <div className="DropDown">
         {data.map(item => {
 		     	return(
-            <li onClick={onClick} key={item.key}>{item.dealName}</li>
+            <div className="element" onClick={onClick} key={item.key}>{item}</div>
 			     )
 		})}
 	  </div>
@@ -20,7 +20,7 @@ const DropDown = (props) => {
 
 
 DropDown.propTypes = {
-    data: PropTypes.array,
+  data: PropTypes.array,
 	onClick: PropTypes.func
 };
 

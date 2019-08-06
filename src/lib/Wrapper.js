@@ -3,11 +3,11 @@ import PropTypes from 'prop-types'
 import "./Search.css";
 
 const Wrapper = (props) => {
- const { wrapperRef, isCollapsed, children } = props;
+ const { container, isOpen, children } = props;
  
   return (
     <Fragment>
-       <div className={`Wrapper ${isCollapsed ? "collapsed" : "expanded"}`} ref={wrapperRef}>
+       <div className={`Wrapper ${isOpen ? "collapsed" : "expanded"}`} ref={container}>
           {children}
 	   </div>
        
@@ -16,8 +16,8 @@ const Wrapper = (props) => {
 };
 
 Wrapper.propTypes = {
- wrapperRef: PropTypes.string,
- isCollapsed: PropTypes.bool,
+ container: PropTypes.string,
+ isOpen: PropTypes.bool,
 };
 
 export default Wrapper;
