@@ -17,10 +17,11 @@ import Search from 'react-find'
   'Inwood',
   'Washington Heights',
   'Central Harlem'
-  ];
+ ];
 
 const App = () => {
   const [data, setData] = useState(initialData);
+
 
   const handleSearch = e => {
     const query = e.target.value.toLowerCase();
@@ -31,13 +32,15 @@ const App = () => {
       }
     })
   };
-    return (
-      <Search
-        placeholder="Find your next place..."
-        data={data}
-        onChange={handleSearch}
-      />
-    )
+  
+  
+  return (
+   <Search
+     placeholder="Find your next place..."
+     data={data}
+     onChange={handleSearch}
+   />
+  )
 }
 ```
 
