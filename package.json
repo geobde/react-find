@@ -1,6 +1,9 @@
 {
   "name": "react-find",
-  "version": "0.1.0",
+  "license": "MIT",
+  "author": "George Bardi",
+  "description": "React Find",
+  "version": "0.1.1",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "files": [
@@ -38,7 +41,7 @@
     "prop-types": "^15.7.2"
   },
   "repository": {
-  "type": "git",
-  "url": "https://github.com/geobde/react-find.git"
-}
+    "type": "git",
+    "url": "https://github.com/geobde/react-find.git"
+  }
 }
