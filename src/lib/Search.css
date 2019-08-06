@@ -1,0 +1,30 @@
+
+.Wrapper {
+
+}
+
+
+.Search {
+  
+}
+
+.Input {
+     width: 500px;
+    height: 50px;
+    background: blue;
+    color: white;
+}
+
+.DropDown {
+    background: red;
+    width: 500px;
+    height: 400px;
+}
+
+.Wrapper.collapsed .DropDown {
+	display: none;
+}
+
+.Wrapper.expanded .DropDown {
+	display: block;
+}
