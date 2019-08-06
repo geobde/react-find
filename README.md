@@ -8,15 +8,14 @@ npm i react-find --save
 ### Usage
 
 ```
-import React, { Component } from 'react'
+import React from 'react'
 import Search from 'react-find'
 ```
 
 ## Props
 
 - `placeholder` - The placeholder text for the input box.
-- `data` - An array of objects which acts as the source of data for the dropdown. This prop is required.
-- `onFocus` - A function which acts as a callback when the input is focussed.
+- `data` - An array of data which acts as the source of data for the dropdown. This prop is required.
 - `onChange` - A function which acts as a callback when the input value is changed.
 
 ## Built With
