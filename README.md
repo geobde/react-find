@@ -1,11 +1,11 @@
 
-### Installation
+## Installation
 
 ```
 npm i react-find --save
 ```
 
-### Usage
+## Usage
 
 ```
 import React { useState } from 'react'
