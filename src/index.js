@@ -5,12 +5,10 @@ import "./lib/Search.css";
 
 
 const App = () => {
-  let data = ['Current Location'];
-
 
   return (
     <Fragment>
-         <Search data={data} />
+         <Search />
     </Fragment>
   )
 };
