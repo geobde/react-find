@@ -1,19 +1,16 @@
-import React, {useState,useContext,Fragment,useRef,useEffect} from "react";
+import React, {useState,useContext,Fragment,useRef, forwardRef, useEffect} from "react";
 import PropTypes from 'prop-types'
 import "./Search.css";
 
-const Wrapper = (props) => {
- const { container, isOpen, children } = props;
+const Wrapper = forwardRef((props, ref) => {
+ const {  isOpen, children } = props;
  
   return (
-    <Fragment>
-       <div className={`Wrapper ${isOpen ? "collapsed" : "expanded"}`} ref={container}>
+       <div className={`Wrapper ${isOpen ? "collapsed" : "expanded"}`} ref={ref}>
           {children}
-	   </div>
-       
-    </Fragment>
+	    </div>
   )
-};
+});
 
 Wrapper.propTypes = {
  container: PropTypes.string,

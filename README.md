@@ -49,6 +49,7 @@ const App = () => {
 - `placeholder` - The placeholder text for the input box.
 - `data` - An array of data which acts as the source of data for the dropdown. This prop is required.
 - `onChange` - A function which acts as a callback when the input value is changed.
+- `isFocus` - A boolean value which indicates if dropdown menus is open.
 
 ## Example
 

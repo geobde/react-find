@@ -7,9 +7,7 @@ import "./lib/Search.css";
 const App = () => {
 
   return (
-    <Fragment>
-         <Search />
-    </Fragment>
+    <Search />
   )
 };
 
