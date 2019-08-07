@@ -50,7 +50,7 @@ const App = () => {
 - `data` - An array of data which acts as the source of data for the dropdown. This prop is required.
 - `onChange` - A function which acts as a callback when the input value is changed.
 
-### Example
+## Example
 
 [![Edit react-edit](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/react-edit-bwhnw?fontsize=14)
 
