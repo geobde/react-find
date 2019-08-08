@@ -53,7 +53,7 @@ const App = () => {
 
 ## Example
 
-[![Edit react-edit](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/react-edit-bwhnw?fontsize=14)
+[![Edit react-find](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/react-edit-bwhnw?fontsize=14)
 
 ## Built With
 
