@@ -1,6 +1,6 @@
 Elegant, accessible search component for React.
 
-![Alt text](https://github.com/geobde/react-find/blob/master/image.gif "Search")
+![Alt text](https://github.com/geobde/react-find/blob/master/search.gif "Search")
 
 ## Installation
 
