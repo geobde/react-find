@@ -3,7 +3,7 @@
   "license": "MIT",
   "author": "George Bardi",
   "description": "⚛️ React component for 🔍 simple search.",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "files": [
@@ -22,9 +22,9 @@
     "@babel/preset-react": "^7.0.0",
     "babel-cli": "^6.26.0",
     "babel-preset-react-app": "^9.0.0",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-scripts": "^3.0.1",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-scripts": "^3.1.0",
     "rimraf": "^2.6.3"
   },
   "browserslist": {

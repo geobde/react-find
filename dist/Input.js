@@ -1,13 +1,17 @@
-import React, { useState, useContext, Fragment, useRef, useEffect } from "react";
+import React, { useState, useContext, Fragment, useRef, forwardRef, useEffect } from "react";
 import "./Search.css";
-
-var Input = function Input(props) {
+var Input = forwardRef(function (props, ref) {
   var type = props.type,
       placeholder = props.placeholder,
       onChange = props.onChange,
       onFocus = props.onFocus,
-      onKeyUp = props.onKeyUp;
+      onKeyUp = props.onKeyUp,
+      isFocus = props.isFocus;
+  useEffect(function () {
+    !!isFocus && ref.current.focus();
+  }, []);
   return React.createElement(Fragment, null, React.createElement("input", {
+    ref: ref,
     type: type,
     placeholder: placeholder,
     onChange: onChange,
@@ -15,10 +19,10 @@ var Input = function Input(props) {
     onKeyUp: onKeyUp,
     className: "Input"
   }));
-};
-
+});
 Input.defaultProps = {
   type: 'text',
-  placeholder: 'City, Zip, Neighborhood, Address or MLS#'
+  isFocus: true,
+  placeholder: 'Address, Neighborhood, City'
 };
 export default Input;

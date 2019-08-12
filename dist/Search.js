@@ -10,13 +10,20 @@ var Search = function Search(props) {
       placeholder = props.placeholder,
       onChange = props.onChange,
       onClick = props.onClick,
+      isFocus = props.isFocus,
       data = props.data;
   var container = useRef(null);
+  var inputRef = useRef(0);
 
   var _useState = useState(true),
       _useState2 = _slicedToArray(_useState, 2),
       isOpen = _useState2[0],
       setOpen = _useState2[1];
+
+  var _useState3 = useState(data),
+      _useState4 = _slicedToArray(_useState3, 2),
+      results = _useState4[0],
+      setResults = _useState4[1];
 
   useEffect(function () {
     document.addEventListener("mousedown", controlMouse);
@@ -24,11 +31,33 @@ var Search = function Search(props) {
       document.removeEventListener("mousedown", controlMouse);
     };
   });
+  useEffect(function () {
+    onChange && setResults(data);
+  }, [data]);
 
   var controlMouse = function controlMouse(event) {
     if (container && !container.current.contains(event.target)) {
       setOpen(true);
     }
+  };
+
+  var handleChange = function handleChange(e) {
+    var query = e.target.value;
+    onChange ? onChange(query) : innerChange(query);
+  };
+
+  var innerChange = function innerChange(query) {
+    setResults(filterData(data, query));
+  };
+
+  var filterData = function filterData(data, query) {
+    return data.filter(function (item) {
+      if (item !== null && item.search(query) !== -1) {
+        return true;
+      }
+
+      return false;
+    });
   };
 
   var onFocus = function onFocus() {
@@ -39,15 +68,21 @@ var Search = function Search(props) {
     className: "Search"
   }, React.createElement(Wrapper, {
     isOpen: isOpen,
-    container: container
+    ref: container
   }, React.createElement(Input, {
+    ref: inputRef,
     type: type,
     placeholder: placeholder,
-    onChange: onChange,
+    onChange: function onChange(e) {
+      return handleChange(e);
+    },
     onFocus: onFocus,
+    isFocus: isFocus,
     className: "Search"
   }), React.createElement(DropDown, {
-    data: data,
+    latestSearch: true,
+    ref: inputRef,
+    data: results,
     onClick: onClick
   }))));
 };

@@ -1,14 +1,11 @@
-import React, { useState, useContext, Fragment, useRef, useEffect } from "react";
+import React, { useState, useContext, Fragment, useRef, forwardRef, useEffect } from "react";
 import "./Search.css";
-
-var Wrapper = function Wrapper(props) {
-  var container = props.container,
-      isOpen = props.isOpen,
+var Wrapper = forwardRef(function (props, ref) {
+  var isOpen = props.isOpen,
       children = props.children;
-  return React.createElement(Fragment, null, React.createElement("div", {
+  return React.createElement("div", {
     className: "Wrapper ".concat(isOpen ? "collapsed" : "expanded"),
-    ref: container
-  }, children));
-};
-
+    ref: ref
+  }, children);
+});
 export default Wrapper;
