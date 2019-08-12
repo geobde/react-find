@@ -1,3 +1,6 @@
+Elegant, accessible search component for React.
+
+![Alt text](https://github.com/geobde/react-find/blob/master/image.gif "Search")
 
 ## Installation
 
@@ -8,52 +11,43 @@ npm i react-find --save
 ## Usage
 
 ```
-import React { useState } from 'react'
-import Search from 'react-find'
+import React from "react";
+import { Search } from "react-find";
+import ReactDOM from "react-dom";
+import "./styles.css";
 
- let initialData = [
-  'Upper Manhattan',
-  'Marble Hill',
-  'Inwood',
-  'Washington Heights',
-  'Central Harlem'
- ];
+function App() {
+  const data = [
+    "Midtown West",
+    "Liberty Island",
+    "Financial District",
+    "Meatpacking District",
+    "Upper West Side",
+    "Flatiron"
+  ];
 
-const App = () => {
-  const [data, setData] = useState(initialData);
-
-
-  const handleSearch = e => {
-    const query = e.target.value.toLowerCase();
-
-    axios.get(`${API}/data?name=${query}`).then(response => {
-      if (response.status === 200) {
-        setData(response.data.content);
-      }
-    })
-  };
-  
-  
   return (
-   <Search
-     placeholder="Find your next place..."
-     data={data}
-     onChange={handleSearch}
-   />
-  )
+    <div className="App">
+      <Search data={data} />
+    </div>
+  );
 }
+
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
+
 ```
+[![Edit react-find](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/react-find-bwhnw?fontsize=14)
 
-## Props
+## API
 
-- `placeholder` - The placeholder text for the input box.
-- `data` - An array of data which acts as the source of data for the dropdown. This prop is required.
-- `onChange` - A function which acts as a callback when the input value is changed.
-- `isFocus` - A boolean value which indicates if dropdown menus is open.
+| Prop              | Type       | Description |
+|-------------------|------------|-------------|
+| `placeholder`     | _string_   |  The placeholder text for the input box. |
+| `data`            | _array_    |  An array of data which acts as the source of data for the dropdown. This prop is required. |
+| `onChange`        | _function_ |  A function which acts as a callback when the input value is changed. |
+| `isFocus`         | _boolean_  |  A boolean value which indicates if dropdown menus is open. |
 
-## Example
-
-[![Edit react-find](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/react-edit-bwhnw?fontsize=14)
 
 ## Built With
 
