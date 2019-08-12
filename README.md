@@ -1,4 +1,4 @@
-Elegant, accessible search component for React.
+Elegant, accessible search component for React with recent searches functionality.
 
 ![Alt text](https://github.com/geobde/react-find/blob/master/search.gif "Search")
 
