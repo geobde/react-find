@@ -1,19 +1,19 @@
-import React, {useState,useContext,Fragment,useRef,useEffect} from "react";
+import React, {useState,useContext,Fragment,useRef, forwardRef, useEffect} from "react";
 import PropTypes from 'prop-types'
 import "./Search.css";
 
-const Input = (props) => {
+const Input = forwardRef((props, ref) => {
  const { type, placeholder, onChange, onFocus, onKeyUp, isFocus } = props;
- const inputRef = useRef(0);
+
 
  useEffect(() => {
-   !!isFocus && inputRef.current.focus();
+   !!isFocus && ref.current.focus();
  },[]);
  
   return (
     <Fragment>
       <input
-        ref={inputRef}
+        ref={ref}
         type={type}
         placeholder={placeholder}
         onChange={onChange}
@@ -23,7 +23,7 @@ const Input = (props) => {
       />
     </Fragment>
   )
-};
+});
 
 
 Input.propTypes = {
@@ -37,7 +37,7 @@ Input.propTypes = {
 Input.defaultProps = {
     type: 'text',
     isFocus: true,
-    placeholder: 'City, Zip, Neighborhood, Address or MLS#',
+    placeholder: 'Address, Neighborhood, City',
 };
 
 export default Input;
