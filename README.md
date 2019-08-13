@@ -1,6 +1,6 @@
 Elegant, accessible search component for React with recent searches & current location functionality.
 
-![Alt text](https://github.com/geobde/react-find/blob/master/search.gif "Search")
+![Alt text](https://github.com/geobde/react-find/blob/master/animation.gif "Search")
 
 ## Installation
 

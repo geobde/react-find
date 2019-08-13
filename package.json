@@ -3,7 +3,7 @@
   "license": "MIT",
   "author": "George Bardi",
   "description": "⚛️ React component for 🔍 simple search.",
-  "version": "1.0.10",
+  "version": "1.1.0",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "files": [

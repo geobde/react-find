@@ -1,0 +1,97 @@
+
+/* .Search  {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1451934403379-ffeff84932da?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 0;
+   
+} */
+
+/* .Search:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #000000a1;
+} */
+
+.Wrapper {
+ width: 100%;   
+ max-width: 680px;
+ margin: 15% auto;
+}
+
+.Wrapper.collapsed .DropDown {
+	display: none;
+}
+
+.Wrapper.expanded .DropDown {
+	display: block;
+}
+
+.Input {
+z-index: 1;
+position: relative;
+box-sizing: border-box;
+width: 100%;   
+max-width: 680px;
+height: 50px;
+background: white;
+color: #555;
+font-size: 14px;
+line-height: 1.2em;
+border: 1px solid #ccc;
+outline: none;
+padding: 15px;
+box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+}
+
+.DropDown {
+ z-index: 1;
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;  
+  height: 400px; 
+  max-width: 680px;
+  background: white;
+  color: #555;
+  overflow-x:hidden;
+  overflow-y:auto;  
+  margin-top: 8px;
+  box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
+
+.DropDown .element {
+    box-sizing: border-box;
+    padding: 0 15px;
+    width: 100%;
+    height: 40px;
+    background: white;
+    color: #555;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+    border-bottom: 1px solid #dcdcdc;
+}
+
+.DropDown .header {
+  background: #f7f7f7;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.DropDown .element:hover {
+  background: #f5f5f5;
+  color: #262626;
+}
