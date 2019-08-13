@@ -5,7 +5,17 @@ import Wrapper from './Wrapper';
 import "./Search.css";
 
 const Search = (props) => {
- const { type, placeholder, onChange, onClick, isFocus, data } = props;
+ const { 
+   type, 
+   placeholder, 
+   onChange, 
+   onClick, 
+   isFocus, 
+   data, 
+   currentLocation, 
+   apiKey, 
+   latestSearch 
+ } = props;
  const container = useRef(null);
  const inputRef = useRef(0);
  const [isOpen, setOpen] = useState(true);
@@ -61,7 +71,7 @@ const Search = (props) => {
      <div className="Search">
      <Wrapper isOpen={isOpen} ref={container}>
        <Input ref={inputRef} type={type} placeholder={placeholder} onChange={(e) => handleChange(e)} onFocus={onFocus} isFocus={isFocus} className="Search"/>
-       <DropDown latestSearch={true} ref={inputRef} data={results} onClick={onClick} />
+       <DropDown currentLocation={currentLocation} apiKey={apiKey} latestSearch={latestSearch} ref={inputRef} data={results} onClick={onClick} />
      </Wrapper>
      </div>
    </Fragment>

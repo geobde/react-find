@@ -3,8 +3,14 @@ import PropTypes from 'prop-types'
 import "./Search.css";
 
 const Input = forwardRef((props, ref) => {
- const { type, placeholder, onChange, onFocus, onKeyUp, isFocus } = props;
-
+ const { 
+   type, 
+   placeholder, 
+   onChange, 
+   onFocus, 
+   onKeyUp, 
+   isFocus 
+ } = props;
 
  useEffect(() => {
    !!isFocus && ref.current.focus();

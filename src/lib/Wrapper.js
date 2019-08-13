@@ -3,7 +3,10 @@ import PropTypes from 'prop-types'
 import "./Search.css";
 
 const Wrapper = forwardRef((props, ref) => {
- const {  isOpen, children } = props;
+ const {  
+   isOpen, 
+   children 
+ } = props;
  
   return (
        <div className={`Wrapper ${isOpen ? "collapsed" : "expanded"}`} ref={ref}>

@@ -46,6 +46,10 @@ ReactDOM.render(<App />, rootElement);
 | `placeholder`     | _string_   |  The placeholder text for the input box. |
 | `data`            | _array_    |  An array of data which acts as the source of data for the dropdown. This prop is required. |
 | `onChange`        | _function_ |  A function which acts as a callback when the input value is changed. |
+| `onClick`         | _function_ |  A function which acts as a callback when the dropdown element is clicked. |
+| `currentLocation` | _boolean_ |   A boolean value which indicates if current location functionality is enabled. |
+| `latestSearch`    | _boolean_ |   A boolean value which indicates if latest search  functionality is enabled. |
+| `apiKey`          | _boolean_ |   If currentLocation is enabled you need to provide the Google API key. |
 | `isFocus`         | _boolean_  |  A boolean value which indicates if dropdown menus is open. |
 
 
